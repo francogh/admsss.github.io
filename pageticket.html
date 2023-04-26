@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seguimiento de Tickets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styleticket.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Seguimiento de Tickets</h1>
+    </div>
+    <div class="main">
+      <form action="PHPExcel.php" method="post">
+        <label for="ticket-details">Detalles del Ticket:</label><br>
+        <textarea id="ticket-details" name="ticket-details" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">Generar Ticket</button>
+      </form>
+      <div id="ticket-num">
+        <?php
+        if (isset($_GET['ticket-num'])) {
+          echo 'Su número de ticket es: '.$_GET['ticket-num'];
+        }
+        ?>
+      </div>
+    </div>
+  </body>
+</html>
